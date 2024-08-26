@@ -64,6 +64,7 @@
         <label for="motivoContato">Qual o motivo do contato?</label>
         <select
           id="motivoContato"
+          role="option"
           formControlName="motivoContato">
           <option value="" disabled selected>Selecione a melhor opção</option>
           <option value="suporte">Suporte</option>
@@ -76,6 +77,7 @@
     <fieldset>
       <label for="melhorFormaContato">Qual a melhor forma de retorno do seu contato?</label>
       <div
+      role="radiogroup"
         class="campo-form">
         <ul class="radio-button">
           <li>
@@ -129,11 +131,13 @@
     <div class="contato-botoes">
       <button
         type="button"
+        role="button"
         class="botao-cancelar"
         (click)="cancelar()">Cancelar
       </button>
       <button
         type="submit"
+        role="button"
         [disabled]="contatoForm.invalid"
         class="botao-enviar">Enviar
       </button>
